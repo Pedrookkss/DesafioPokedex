@@ -1,7 +1,4 @@
-const pokemonList = document.getElementById('pokemonList')
-
-const limit = 1
- let offset = 0; //o numero 0 representa o pokemon 1 e assim por diante
+const pokemonList = document.getElementById('pokemonList');
 
 function convertPokemonToLi(pokemon) {
     return `
@@ -29,14 +26,15 @@ function convertPokemonToLi(pokemon) {
             </div>
         </div>
     </div>
-    `
+    `;
 }
 
-function loadPokemonItens(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+function loadPokemonByNumber(pokeNumber) {
+    pokeApi.getPokemonByNumber(pokeNumber).then(pokemon => {
+        const newHtml = convertPokemonToLi(pokemon);
+        pokemonList.innerHTML = newHtml; 
+    });
 }
 
-loadPokemonItens(offset, limit)
+const pokemonNumber = 150; 
+loadPokemonByNumber(pokemonNumber);
