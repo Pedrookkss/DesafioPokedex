@@ -32,4 +32,4 @@ pokeApi.getPokemonByNumber = (pokeNumber) => {
                 .then(response => response.json())
                 .then(speciesData => convertPokeApiDetailToPokemon(pokeDetail, speciesData));
         });
-};
+}

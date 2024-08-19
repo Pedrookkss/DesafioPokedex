@@ -36,5 +36,5 @@ function loadPokemonByNumber(pokeNumber) {
     });
 }
 
-const pokemonNumber = 1; 
+const pokemonNumber = 50;
 loadPokemonByNumber(pokemonNumber);
