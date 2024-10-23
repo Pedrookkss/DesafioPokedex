@@ -2,8 +2,8 @@
 
 ## Sobre o Projeto:
 Código desenvolvido para treinar os seguintes conceitos:
-- Pagina Estática;
-- Logica de Programação.
+- Página Estática;
+- Lógica de Programação.
   
 ## Tecnologia Empregada:
 - Html;
